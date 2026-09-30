@@ -1,0 +1,12 @@
+{
+  "schemaVersion": 1,
+  "boardId": "icebreaker",
+  "defaultIoStandard": "LVCMOS33",
+  "assignments": [
+    { "signal": "clk", "physicalPin": "35" },
+    { "signal": "led_n", "physicalPin": "37", "driveMa": 8 },
+    { "signal": "reset_n", "physicalPin": "10", "pull": "up" }
+  ],
+  "clocks": [{ "name": "sys_clk", "signal": "clk", "frequencyHz": 12000000 }],
+  "ioDelays": [{ "signal": "reset_n", "direction": "input", "clock": "sys_clk", "maxNs": 4, "minNs": 0 }]
+}
